@@ -64,5 +64,6 @@ struct ThemeTokens {
 // Built-in theme preset — defined in ThemeManager.cpp
 // ---------------------------------------------------------------------------
 extern const ThemeTokens THEME_OBSIDIAN;
+extern const ThemeTokens THEME_GANGLIA;
 
 } // namespace fincept::ui

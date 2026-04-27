@@ -219,7 +219,7 @@ void UpdateService::on_manifest_reply_finished() {
                  QString("Already up to date — local=%1, remote=%2").arg(local_version, remote_version));
         if (!silent_) {
             QMessageBox::information(
-                dialog_parent(), QStringLiteral("Fincept Terminal"),
+                dialog_parent(), QStringLiteral("Ganglia Terminal"),
                 QStringLiteral("You're running the latest version (%1).").arg(local_version));
         }
         finish_check(false);
@@ -426,7 +426,7 @@ void UpdateService::finish_check(bool update_found) {
 }
 
 void UpdateService::show_error(const QString& text) {
-    QMessageBox::warning(dialog_parent(), QStringLiteral("Fincept Terminal"), text);
+    QMessageBox::warning(dialog_parent(), QStringLiteral("Ganglia Terminal"), text);
 }
 
 } // namespace fincept::services

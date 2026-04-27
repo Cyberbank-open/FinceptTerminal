@@ -377,7 +377,7 @@ QMap<QString, QString> LlmService::get_headers() const {
         if (p == "openrouter") {
             // Optional attribution — appears on openrouter.ai/rankings leaderboard
             h["HTTP-Referer"] = "https://fincept.in";
-            h["X-Title"] = "Fincept Terminal";
+            h["X-Title"] = "Ganglia Terminal";
         }
     }
     return h;

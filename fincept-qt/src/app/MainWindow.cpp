@@ -130,7 +130,7 @@ int MainWindow::next_window_id() {
 MainWindow::MainWindow(int window_id, QWidget* parent) : QMainWindow(parent), window_id_(window_id) {
     // Show active profile in title bar when using a non-default profile
     const QString profile = ProfileManager::instance().active();
-    setWindowTitle(profile == "default" ? "Fincept Terminal" : QString("Fincept Terminal [%1]").arg(profile));
+    setWindowTitle(profile == "default" ? "Ganglia Terminal" : QString("Ganglia Terminal [%1]").arg(profile));
     // Load icon from the embedded Windows resource (IDI_ICON1 in app.rc).
     // Falls back to the .ico beside the executable on other platforms.
     QIcon app_icon;
@@ -1344,13 +1344,13 @@ void MainWindow::set_shell_visible(bool visible) {
     if (!visible) {
         // Reset title to plain app name — no screen suffix while on auth screens
         const QString profile = ProfileManager::instance().active();
-        setWindowTitle(profile == "default" ? "Fincept Terminal"
-                                            : QString("Fincept Terminal [%1]").arg(profile));
+        setWindowTitle(profile == "default" ? "Ganglia Terminal"
+                                            : QString("Ganglia Terminal [%1]").arg(profile));
     }
 }
 
 void MainWindow::update_window_title() {
-    QString title = "Fincept Terminal";
+    QString title = "Ganglia Terminal";
 
     const QString profile = ProfileManager::instance().active();
     if (profile != "default")

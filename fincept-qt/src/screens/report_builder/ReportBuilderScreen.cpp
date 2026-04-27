@@ -686,7 +686,7 @@ bool ReportBuilderScreen::deserialize_from_json(const QString& json) {
         QJsonObject m = root["metadata"].toObject();
         metadata_.title = m.value("title").toString("Untitled Report");
         metadata_.author = m.value("author").toString("Analyst");
-        metadata_.company = m.value("company").toString("Fincept Corporation");
+        metadata_.company = m.value("company").toString("Ganglia Network");
         metadata_.date = m.value("date").toString();
         metadata_.header_left = m.value("header_left").toString();
         metadata_.header_center = m.value("header_center").toString();

@@ -1,7 +1,25 @@
 name: Build Qt Terminal - All Platforms
 
 on:
-  # Manual-only — release.yml handles tag builds / installer generation.
+  # Auto-trigger on every push to main / dev branches AND on PRs targeting them,
+  # so the Ganglia fork gets a fresh build artifact for every commit without
+  # the maintainer having to remember to click "Run workflow".
+  # release.yml continues to handle tag builds + final installer generation.
+  push:
+    branches:
+      - main
+      - master
+      - 'rebrand/**'
+      - 'feature/**'
+    paths-ignore:
+      - '**/*.md'
+      - 'docs/**'
+      - 'images/**'
+      - '.github/ISSUE_TEMPLATE/**'
+  pull_request:
+    branches:
+      - main
+      - master
   workflow_dispatch:
 
 env:

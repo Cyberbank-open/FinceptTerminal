@@ -84,10 +84,11 @@ TrademarksScreen::TrademarksScreen(QWidget* parent) : QWidget(parent) {
     pvl->setSpacing(6);
 
     pvl->addWidget(heading("1", "FINCEPT TRADEMARKS"));
-    pvl->addWidget(bullet("Fincept (TM)"));
-    pvl->addWidget(bullet("Fincept Terminal (TM)"));
-    pvl->addWidget(bullet("Fincept Corporation (TM)"));
-    pvl->addWidget(bullet("Fincept Logo and associated visual identities"));
+    pvl->addWidget(bullet("Ganglia (TM)"));
+    pvl->addWidget(bullet("Ganglia Network (TM)"));
+    pvl->addWidget(bullet("Ganglia Terminal (TM)"));
+    pvl->addWidget(bullet("Ganglia Network (TM)"));
+    pvl->addWidget(bullet("Ganglia lobster mascot, $GANG / $AXON token marks, and associated visual identities"));
 
     pvl->addWidget(heading("2", "THIRD-PARTY TRADEMARKS"));
     pvl->addWidget(body("The following are trademarks of their respective owners:"));
@@ -111,7 +112,7 @@ TrademarksScreen::TrademarksScreen(QWidget* parent) : QWidget(parent) {
     pvl->addWidget(bullet("Creating confusingly similar marks"));
 
     pvl->addWidget(heading("4", "COPYRIGHT NOTICE"));
-    pvl->addWidget(body("Copyright 2024-2026 Fincept Corporation. All rights reserved."));
+    pvl->addWidget(body("Copyright 2024-2026 Ganglia Network. All rights reserved."));
     pvl->addWidget(body("This software is licensed under AGPL-3.0-or-later for open source use, "
                         "with a separate commercial license available for enterprise deployment."));
 
@@ -126,7 +127,7 @@ TrademarksScreen::TrademarksScreen(QWidget* parent) : QWidget(parent) {
     pvl->addWidget(body("To report trademark infringement, contact: support@fincept.in"));
 
     pvl->addWidget(heading("7", "LEGAL DEPARTMENT"));
-    pvl->addWidget(body("Fincept Corporation — Legal Department"));
+    pvl->addWidget(body("Ganglia Network — Legal Department"));
     pvl->addWidget(body("Email: support@fincept.in"));
 
     vl->addWidget(panel);

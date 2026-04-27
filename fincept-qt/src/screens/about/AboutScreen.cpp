@@ -119,7 +119,7 @@ AboutScreen::AboutScreen(QWidget* parent) : QWidget(parent) {
 
         auto* left = new QVBoxLayout;
         left->setSpacing(4);
-        auto* name = new QLabel("Fincept Terminal");
+        auto* name = new QLabel("Ganglia Terminal");
         name->setStyleSheet(QString("color: %1; font-size: 15px; font-weight: bold; background: transparent; "
                                     "font-family: 'Consolas','Courier New',monospace;")
                                 .arg(ui::colors::TEXT_PRIMARY()));
@@ -165,7 +165,7 @@ AboutScreen::AboutScreen(QWidget* parent) : QWidget(parent) {
         pvl->addWidget(body);
 
         // Footer bar
-        auto* foot = new QLabel("© 2024-2026 Fincept Corporation. All rights reserved.");
+        auto* foot = new QLabel("© 2024-2026 Ganglia Network. All rights reserved.");
         foot->setStyleSheet(QString("color: %1; font-size: 11px; background: %2; "
                                     "padding: 6px 14px; border-top: 1px solid %3; "
                                     "font-family: 'Consolas','Courier New',monospace;")
@@ -260,15 +260,22 @@ AboutScreen::AboutScreen(QWidget* parent) : QWidget(parent) {
         bvl->setContentsMargins(14, 10, 14, 12);
         bvl->setSpacing(6);
 
-        auto* desc = new QLabel("\"Fincept\", \"Fincept Terminal\", and associated logos are trademarks of "
-                                "Fincept Corporation. Use of these marks requires explicit written permission.");
+        auto* desc = new QLabel(
+            "\"Ganglia\", \"Ganglia Network\", \"Ganglia Terminal\", and associated logos are "
+            "trademarks of Ganglia Network. \"Fincept\", \"Fincept Terminal\", and the original "
+            "Fincept logo are trademarks of Fincept Corporation, used here under the AGPL-3.0 source "
+            "code license, not the trademark license. This product is a derivative work of "
+            "FinceptTerminal and is not endorsed by or affiliated with Fincept Corporation.");
         desc->setStyleSheet(BODY());
         desc->setWordWrap(true);
         bvl->addWidget(desc);
 
         auto* perm =
-            new QLabel("Permission is not granted to use Fincept trademarks in a way that suggests "
-                       "affiliation with or endorsement by Fincept Corporation without prior written consent.");
+            new QLabel(
+                "Permission is not granted to use the original Fincept trademarks (owned by Fincept "
+                "Corporation) in a way that suggests affiliation with or endorsement by Fincept "
+                "Corporation. Likewise, permission is not granted to use Ganglia Network trademarks "
+                "without prior written consent from Ganglia Network.");
         perm->setStyleSheet(MUTED());
         perm->setWordWrap(true);
         bvl->addWidget(perm);

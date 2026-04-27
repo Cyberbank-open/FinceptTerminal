@@ -109,8 +109,8 @@ PrivacyScreen::PrivacyScreen(QWidget* parent) : QWidget(parent) {
     // 1 — Commitment
     pvl->addWidget(section_heading("#", "OUR COMMITMENT TO PRIVACY"));
     pvl->addWidget(
-        body_text("At Fincept Corporation, we are committed to protecting your privacy. This policy describes "
-                  "how we collect, use, and safeguard your personal information when you use Fincept Terminal."));
+        body_text("At Ganglia Network, we are committed to protecting your privacy. This policy describes "
+                  "how we collect, use, and safeguard your personal information when you use Ganglia Terminal."));
 
     // 2 — Information We Collect
     pvl->addWidget(section_heading("@", "INFORMATION WE COLLECT"));
@@ -180,7 +180,7 @@ PrivacyScreen::PrivacyScreen(QWidget* parent) : QWidget(parent) {
 
     // 7 — Contact
     pvl->addWidget(section_heading("@", "CONTACT US"));
-    pvl->addWidget(body_text("Privacy Officer: support@fincept.in"));
+    pvl->addWidget(body_text("Privacy Officer: support@ganglia.network"));
     pvl->addWidget(body_text("For privacy-related inquiries, write to the address above."));
 
     vl->addWidget(panel);

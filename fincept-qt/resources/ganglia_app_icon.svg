@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <!-- Ganglia Network app icon — Deep Navy bg + Lobster head + neural pulse -->
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="80%">
+      <stop offset="0%" stop-color="#243556"/>
+      <stop offset="60%" stop-color="#1B2A4A"/>
+      <stop offset="100%" stop-color="#0a0f1a"/>
+    </radialGradient>
+    <radialGradient id="iris" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#5DCAA5"/>
+      <stop offset="50%" stop-color="#2E75B6"/>
+      <stop offset="100%" stop-color="#1B2A4A"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background: rounded square w/ Deep Navy -->
+  <rect x="0" y="0" width="1024" height="1024" rx="180" ry="180" fill="url(#bg)"/>
+
+  <!-- Subtle neural-network grid overlay (low opacity dots) -->
+  <g opacity="0.10" fill="#2E75B6">
+    <circle cx="120" cy="160" r="3"/><circle cx="280" cy="120" r="2"/>
+    <circle cx="450" cy="180" r="3"/><circle cx="620" cy="140" r="2"/>
+    <circle cx="800" cy="180" r="3"/><circle cx="900" cy="320" r="2"/>
+    <circle cx="120" cy="400" r="2"/><circle cx="160" cy="640" r="3"/>
+    <circle cx="320" cy="800" r="2"/><circle cx="540" cy="860" r="3"/>
+    <circle cx="780" cy="780" r="2"/><circle cx="880" cy="600" r="3"/>
+  </g>
+  <g opacity="0.08" stroke="#2E75B6" stroke-width="1" fill="none">
+    <path d="M120 160 L280 120 L450 180 L620 140 L800 180"/>
+    <path d="M160 640 L320 800 L540 860 L780 780 L880 600"/>
+  </g>
+
+  <!-- Lobster body (translated to center, scaled up ~3.5x) -->
+  <g transform="translate(512 512) scale(3.4) translate(-120 -110)">
+    <!-- Body silhouette (deeper red) -->
+    <path d="M120 40 C155 20, 195 25, 210 55 C225 85, 220 130, 200 155 C180 180, 160 190, 120 195 C80 190, 60 180, 40 155 C20 130, 15 85, 30 55 C45 25, 85 20, 120 40Z"
+          fill="#B22222" opacity="0.35" stroke="#C43333" stroke-width="2.5"/>
+    <!-- Body inner (richer red) -->
+    <path d="M120 50 C148 35, 180 40, 192 62 C204 84, 200 120, 185 142 C170 164, 150 172, 120 175 C90 172, 70 164, 55 142 C40 120, 36 84, 48 62 C60 40, 92 35, 120 50Z"
+          fill="#B22222" opacity="0.55"/>
+    <!-- Neural network glow lines on body -->
+    <path d="M80 70 Q100 90, 120 75 Q140 60, 160 80" fill="none" stroke="#2E75B6" stroke-width="1.4" opacity="0.7"/>
+    <path d="M65 100 Q85 85, 100 95 Q115 105, 120 90" fill="none" stroke="#2E75B6" stroke-width="0.9" opacity="0.5"/>
+    <path d="M140 95 Q150 85, 165 95 Q175 105, 175 115" fill="none" stroke="#2E75B6" stroke-width="0.9" opacity="0.5"/>
+    <!-- Glow nodes -->
+    <circle cx="95" cy="75" r="2" fill="#2E75B6" opacity="0.8"/>
+    <circle cx="145" cy="72" r="2" fill="#2E75B6" opacity="0.8"/>
+    <circle cx="120" cy="55" r="2" fill="#2E75B6" opacity="0.7"/>
+
+    <!-- LEFT EYE -->
+    <circle cx="88" cy="98" r="20" fill="#0D1B2A"/>
+    <circle cx="88" cy="98" r="16" fill="url(#iris)"/>
+    <circle cx="88" cy="98" r="9" fill="#0D1B2A"/>
+    <circle cx="88" cy="95" r="4.5" fill="#5DCAA5"/>
+    <circle cx="91" cy="93" r="1.8" fill="#FFFFFF" opacity="0.95"/>
+    <!-- eye outer rings -->
+    <circle cx="88" cy="98" r="22" fill="none" stroke="#2E75B6" stroke-width="1" opacity="0.4"/>
+    <circle cx="88" cy="98" r="26" fill="none" stroke="#2E75B6" stroke-width="0.5" opacity="0.2"/>
+
+    <!-- RIGHT EYE -->
+    <circle cx="152" cy="98" r="20" fill="#0D1B2A"/>
+    <circle cx="152" cy="98" r="16" fill="url(#iris)"/>
+    <circle cx="152" cy="98" r="9" fill="#0D1B2A"/>
+    <circle cx="152" cy="95" r="4.5" fill="#5DCAA5"/>
+    <circle cx="155" cy="93" r="1.8" fill="#FFFFFF" opacity="0.95"/>
+    <circle cx="152" cy="98" r="22" fill="none" stroke="#2E75B6" stroke-width="1" opacity="0.4"/>
+    <circle cx="152" cy="98" r="26" fill="none" stroke="#2E75B6" stroke-width="0.5" opacity="0.2"/>
+
+    <!-- ANTENNAE -->
+    <path d="M95 52 Q80 20, 55 8" fill="none" stroke="#C43333" stroke-width="3" stroke-linecap="round"/>
+    <path d="M90 55 Q72 30, 45 25" fill="none" stroke="#C43333" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M145 52 Q160 20, 185 8" fill="none" stroke="#C43333" stroke-width="3" stroke-linecap="round"/>
+    <path d="M150 55 Q168 30, 195 25" fill="none" stroke="#C43333" stroke-width="2.2" stroke-linecap="round"/>
+    <!-- Antenna tip nodes -->
+    <circle cx="55" cy="8" r="3.5" fill="#2E75B6" opacity="0.85"/>
+    <circle cx="45" cy="25" r="2.5" fill="#2E75B6" opacity="0.55"/>
+    <circle cx="185" cy="8" r="3.5" fill="#2E75B6" opacity="0.85"/>
+    <circle cx="195" cy="25" r="2.5" fill="#2E75B6" opacity="0.55"/>
+
+    <!-- Mouth -->
+    <path d="M105 145 Q120 152, 135 145" fill="none" stroke="#C43333" stroke-width="2" stroke-linecap="round" opacity="0.85"/>
+  </g>
+</svg>

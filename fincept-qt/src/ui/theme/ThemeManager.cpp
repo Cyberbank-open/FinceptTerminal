@@ -46,18 +46,94 @@ const ThemeTokens THEME_OBSIDIAN = {
 };
 
 // ---------------------------------------------------------------------------
+// GANGLIA NETWORK theme — official brand palette
+//   Source: Ganglia Network Brand Book v1.0 + ganglia.netlify.app design tokens
+//   Philosophy: dark mode first; never pure black — Deep Navy as deepest base.
+//   Palette: Ganglia Red (brand), Neural Blue (tech/$AXON), Deep Navy (auth),
+//            Signal Gold (VIP), Data Green (positive), Pulse White (text).
+// ---------------------------------------------------------------------------
+const ThemeTokens THEME_GANGLIA = {
+    .name = "Ganglia",
+
+    // Backgrounds — Deep Navy spectrum (no pure black, per brand rules)
+    .bg_base = "#0a0f1a",     // deepest — matches site dark sections
+    .bg_surface = "#13243a",  // card / panel surface
+    .bg_raised = "#1b2a4a",   // raised — Deep Navy from brand book
+    .bg_hover = "#243556",    // hover state
+
+    // Borders — subtle navy gradients, Neural Blue for focus
+    .border_dim = "#1b2a4a",
+    .border_med = "#2a3d5e",
+    .border_bright = "#2e75b6",  // Neural Blue accent on focus
+
+    // Text — Pulse White spectrum
+    .text_primary = "#f0f4f8",   // Pulse White (brand)
+    .text_secondary = "#8a95a5",
+    .text_tertiary = "#5a6b82",
+    .text_dim = "#3d4d6b",
+
+    // Accent — Ganglia Red (#B22222 from brand)
+    .accent = "#b22222",
+    .accent_dim = "#8b1a1a",      // hover red from website
+    .text_on_accent = "#ffffff",
+
+    // Icons
+    .icon_dim = "#8a95a5",
+    .icon_hover = "#f0f4f8",
+
+    // Functional / semantic — financial-software conventions, Ganglia palette
+    .positive = "#5dcaa5",        // Data Green from website (gain / up)
+    .positive_dim = "#1f4f3d",
+    .negative = "#e24b4a",        // Burn Red from website (loss / down)
+    .negative_dim = "#7a1f1e",
+    .warning = "#ef9f27",         // Alert Amber
+    .info = "#2e75b6",            // Neural Blue
+    .cyan = "#2e75b6",            // Neural Blue (cyan slot — secondary highlight)
+
+    // Tinted backgrounds — translucent fills
+    .accent_bg = "#1f0f0f",       // red wash
+    .positive_bg = "#0f1f15",     // green wash
+    .negative_bg = "#1f0f0f",     // red wash
+
+    // Table
+    .row_alt = "#13243a",
+
+    // Font — JetBrains Mono primary (terminal data, per brand "data/code = mono")
+    //         Inter as proportional fallback for non-data UI strings
+    .font_family = "'JetBrains Mono','Inter',ui-monospace,'Consolas','Courier New',monospace",
+    .font_size_base = 14,
+
+    // Chart palette — 6 distinguishable brand colors on dark background
+    .chart_colors = {
+        "#b22222",  // Ganglia Red
+        "#2e75b6",  // Neural Blue
+        "#5dcaa5",  // Data Green
+        "#d4a843",  // Signal Gold
+        "#ef9f27",  // Alert Amber
+        "#e24b4a",  // Burn Red
+    },
+};
+
+// ---------------------------------------------------------------------------
 // ThemeManager implementation
 // ---------------------------------------------------------------------------
 
-ThemeManager::ThemeManager() : QObject(nullptr), current_(THEME_OBSIDIAN) {}
+ThemeManager::ThemeManager() : QObject(nullptr), current_(THEME_GANGLIA) {}
 
 ThemeManager& ThemeManager::instance() {
     static ThemeManager inst;
     return inst;
 }
 
-void ThemeManager::apply_theme(const QString& /*name*/) {
-    current_ = THEME_OBSIDIAN;
+void ThemeManager::apply_theme(const QString& name) {
+    // Theme switcher — Ganglia is the default brand palette.
+    // Pass "Obsidian" to fall back to the upstream Fincept palette.
+    if (name.compare(QStringLiteral("Obsidian"), Qt::CaseInsensitive) == 0) {
+        current_ = THEME_OBSIDIAN;
+    } else {
+        // Default: Ganglia Network brand theme
+        current_ = THEME_GANGLIA;
+    }
     rebuild_and_apply();
 }
 
